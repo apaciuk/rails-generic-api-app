@@ -2,6 +2,8 @@
 
 Test api using HTTParty
 
+run ruby api.rb  from app folder
+
 Things you may want to cover:
 
 * Ruby version
