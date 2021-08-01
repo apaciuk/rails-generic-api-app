@@ -2,19 +2,18 @@ require 'rubygems'
 require 'httparty'
 
 #class StackExchange
-   # include HTTParty
-   #base_uri 'api.stackexchange.com'
+    #include HTTParty
+   #base_uri ' https://api.igdb.com/v4'
 
-    #def initialize(service, page)
-       # @options = { query: {site: service}}
-    #end
-
+   # def initialize(service, page)
+    #    @options = { query: {site: service}}
+   # end
    #def questions
       #  self.class.get('/2.2/questions', @options)
    # end
 
-   #def users 
-       # self.class.get('/2.2/users', @options)
+  # def users 
+    #    self.class.get('/2.2/users', @options)
     #end
 #end
 
@@ -30,18 +29,19 @@ require 'httparty'
 
 class XhostcomPosts
  include HTTParty
- base_uri   'edutechional-resty.herokuapp.com/'
+ base_uri   'https://jsonplaceholder.typicode.com/'
 
  def posts
-    self.class.get('/posts.json')
+    self.class.get('/posts')
  end
 end
 
 xhostcom_posts = XhostcomPosts.new
 #puts xhostcom_posts.posts
 xhostcom_posts.posts.each do |post|
-    p "Title: #{post['title']} | Description: #{post['description']}"
+    p "Title: #{post['title']} | Body: #{post['body']}"
 end
+
 
 
 

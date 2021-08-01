@@ -1,7 +1,6 @@
-# README
+# rails-generic-api-app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Test api using HTTParty
 
 Things you may want to cover:
 
